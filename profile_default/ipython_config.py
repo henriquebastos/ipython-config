@@ -123,7 +123,7 @@
 #------------------------------------------------------------------------------
 
 ## Whether to display a banner upon starting IPython.
-#c.TerminalIPythonApp.display_banner = True
+c.TerminalIPythonApp.display_banner = False
 
 ## If a command or file is given via the command-line, e.g. 'ipython foo.py',
 #  start an interactive shell after executing the file or command.
@@ -184,7 +184,7 @@
 #c.InteractiveShell.color_info = True
 
 ## Set the color scheme (NoColor, Neutral, Linux, or LightBG).
-#c.InteractiveShell.colors = 'Neutral'
+c.InteractiveShell.colors = 'lightbg'
 
 ## 
 #c.InteractiveShell.debug = False
@@ -274,7 +274,7 @@
 ## Set to confirm when you try to exit IPython with an EOF (Control-D in Unix,
 #  Control-Z/Enter in Windows). By typing 'exit' or 'quit', you can force a
 #  direct exit without any confirmation.
-#c.TerminalInteractiveShell.confirm_exit = True
+c.TerminalInteractiveShell.confirm_exit = False
 
 ## Options for displaying tab completions, 'column', 'multicolumn', and
 #  'readlinelike'. These options are for `prompt_toolkit`, see `prompt_toolkit`
@@ -285,18 +285,18 @@
 #c.TerminalInteractiveShell.editing_mode = 'emacs'
 
 ## Set the editor used by IPython (default to $EDITOR/vi/notepad).
-#c.TerminalInteractiveShell.editor = 'vi'
+#c.TerminalInteractiveShell.editor = 'subl'
 
 ## Enable vi (v) or Emacs (C-X C-E) shortcuts to open an external editor. This is
 #  in addition to the F2 binding, which is always enabled.
 #c.TerminalInteractiveShell.extra_open_editor_shortcuts = False
 
 ## Highlight matching brackets.
-#c.TerminalInteractiveShell.highlight_matching_brackets = True
+c.TerminalInteractiveShell.highlight_matching_brackets = True
 
 ## The name or class of a Pygments style to use for syntax
 #         highlighting: 
-#  algol_nu, rainbow_dash, arduino, paraiso-light, algol, pastie, fruity, vs, xcode, paraiso-dark, rrt, bw, autumn, tango, perldoc, trac, colorful, monokai, native, abap, default, friendly, emacs, manni, igor, borland, vim, murphy, lovelace
+#  perldoc, bw, algol_nu, friendly, paraiso-dark, arduino, manni, fruity, xcode, trac, monokai, autumn, tango, rainbow_dash, paraiso-light, vim, colorful, rrt, native, pastie, borland, murphy, default, vs, emacs, algol, abap, igor, lovelace
 #c.TerminalInteractiveShell.highlighting_style = traitlets.Undefined
 
 ## Override highlighting format for specific tokens
@@ -306,7 +306,7 @@
 #c.TerminalInteractiveShell.mouse_support = False
 
 ## Class used to generate Prompt token for prompt_toolkit
-#c.TerminalInteractiveShell.prompts_class = 'IPython.terminal.prompts.Prompts'
+c.TerminalInteractiveShell.prompts_class = 'wttdprompt.CustomPrompts'
 
 ## Use `raw_input` for the REPL, without completion, multiline input, and prompt
 #  colors.
@@ -323,7 +323,7 @@
 #c.TerminalInteractiveShell.space_for_menu = 6
 
 ## Automatically set the terminal title
-#c.TerminalInteractiveShell.term_title = True
+c.TerminalInteractiveShell.term_title = True
 
 ## Use 24bit colors instead of 256 colors in prompt highlighting. If your
 #  terminal supports true color, the following command should print 'TRUECOLOR'
