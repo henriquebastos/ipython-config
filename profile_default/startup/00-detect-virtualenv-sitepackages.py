@@ -14,15 +14,14 @@ https://github.com/ipython/ipython/blob/master/IPython/core/interactiveshell.py#
 Author: Henrique Bastos <henrique@bastos.net>
 License: BSD
 """
+
 import os
 from os.path import join
 import sys
 from glob import glob
 
 
-virtualenv = os.environ.get('VIRTUAL_ENV')
-
-if virtualenv:
+if virtualenv := os.environ.get('VIRTUAL_ENV'):
     for path in glob(join(virtualenv, 'lib', 'python*', '*')):
         if path not in sys.path:
             sys.path.insert(0, path)
